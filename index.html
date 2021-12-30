@@ -6,100 +6,224 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="container">
-    <div class="info">
-        <img src="recources/photo_2021-05-30_16-44-58.jpg" alt="тут моя фотка"
-             class="logoimage"/>
-        <div class="info-text">
 
-            <h1>Gleb Kisliak</h1>
-            <p>I am student at <strong>BNTU University</strong></p>
-            <p>I enjoy travelling, programming, sport and many other activities.</p>
+<div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="header-logo">
+                    <div class="header-media">
+                        <img src="recources/rs_school_js.svg" class="header-image">
+                    </div>
+                </div>
+                <menu class="header-menu">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <a href="#info" class="link">About me</a>
+                        </li>
+                        <li class="header-item">
+                            <a href="#hobbies" class="link">My hobbies </a>
+                        </li>
+                        <li class="header-item">
+                            <a href="#experience" class="link">My experience</a>
+                        </li>
+                        <li class="header-item">
+                            <a href="#course" class="link">My courses</a>
+                        </li>
+                        <li class="header-item">
+                            <a href="#skills" class="link">Skills</a>
+                        </li>
+                        <li class="header-item">
+                            <a href="#code" class="link">Code</a>
+                        </li>
 
 
-            <h4>My social networks</h4>
-            <a href="https://instagram.com/gleb.kisliak" target="_blank">Instagram</a>
-            |
-            <a target="_blank" href="https://vk.com/gleb.kisliak">VK</a>
-
+                    </ul>
+                </menu>
+                <nav>
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <a href="https://instagram.com/gleb.kisliak" target="_blank" class="link">Instagram</a>
+                        </li>
+                        <li class="header-item">
+                            <a href="https://vk.com/gleb.kisliak" target="_blank" class="link">VK</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
+    </header>
+
+    <div class="container">
+
+        <div class="info" id="info">
+
+            <div class="info-media">
+                <img src="recources/photo_2021-05-30_16-44-58.jpg" alt="That's my photo"
+                     class="info-image"/>
+            </div>
+
+            <div class="info-content">
+
+                <h1 class="info-title">Gleb Kisliak</h1>
+                <p class="info-description">I am student at BNTU University.</p>
+                <p class="info-description">I enjoy travelling, programming, sport and many other activities.</p>
+
+                <h4 class="info-headline">Contact me on:</h4>
+                <a href="https://instagram.com/gleb.kisliak" class="info-link link" target="_blank">Instagram</a>
+                |
+                <a target="_blank" href="https://vk.com/gleb.kisliak" class="info-link link">VK</a>
+                |
+                <a target="_blank" href="https://gmail.com" class="info-link link">Gmail:</a>
+                gleb.kisliak@gmail.com
+            </div>
+        </div>
 
 
-    <div class="card bg-yellow">
-        <h2>My hobbies</h2>
-        <ol class="list">
-            <li>Studying</li>
-            <li>Car driving</li>
-            <li>Sport</li>
-            <li>Travelling</li>
-        </ol>
-    </div>
+        <div class="hobbies card bg-yellow" id="hobbies">
+            <h2>My hobbies</h2>
+            <ol class="list">
+                <li>Studying</li>
+                <li>Car driving</li>
+                <li>Sport</li>
+                <li>Travelling</li>
+            </ol>
+        </div>
 
-    <div class="card bg-green">
-        <h2>Work experience</h2>
-        <table class="table">
-            <tr>
-                <td>BNTU</td>
-                <td>Student</td>
-                <td>2018 - now</td>
-            </tr>
-            <tr>
-                <td>School</td>
-                <td>Student</td>
-                <td>2007 - 2018</td>
-            </tr>
-            <tr>
-                <td>Music School</td>
-                <td>Student</td>
-                <td>2011 - 2015</td>
-            </tr>
+        <div class="experience card bg-green" id="experience">
+            <h2>Work experience</h2>
+            <table class="table">
+                <tr>
+                    <td>BNTU</td>
+                    <td>Student</td>
+                    <td>2018 - now</td>
+                </tr>
+                <tr>
+                    <td>School</td>
+                    <td>Student</td>
+                    <td>2007 - 2018</td>
+                </tr>
+                <tr>
+                    <td>Music School</td>
+                    <td>Student</td>
+                    <td>2011 - 2015</td>
+                </tr>
+            </table>
+        </div>
 
-        </table>
-    </div>
+        <div class="code card bg-lime" id="code">
+            <h2>Code examples</h2>
+            <code>
+                package framework;<Br>
 
-    <div class="card bg-red">
-        <h2>Youtube courses</h2>
-        <ul class="link-list">
-            <li>
-                <a href="https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw">Vladilen Minin channel</a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw">JS course</a>
-            </li>
-        </ul>
+                import framework.utils.WaitingUtils;<Br>
+                import framework.utils.Logger;<Br>
+                public abstract class BaseForm {<Br>
+                private BaseElement uniqElement;<Br>
+                private String formName;<Br>
 
-        <div class="contact">
-            <h2>Contact me</h2>
+                protected BaseForm(BaseElement uniqElement, String formName) {<Br>
+                this.uniqElement = uniqElement;<Br>
+                this.formName = formName;<Br>
+                }<Br>
 
-            <form action="">
-                <div class="row">
-                    <div class="form-group">
-                        <label for="name">Your name:</label>
-                        <input type="text" id="name" placeholder="Enter your name...">
+                public boolean isFormOpen() {<Br>
+                if(uniqElement.isPresentUniqElement())<Br>
+                Logger.logInfo("open " + formName + ".");<Br>
+                else<Br>
+                Logger.logWarn("not open " + formName + ".");<Br>
+                return uniqElement.isPresentUniqElement();<Br>
+                }<Br>
+
+                public boolean isFormClose() {<Br>
+                if(WaitingUtils.invisibilityOfElementLocated(uniqElement.getLocator()))<Br>
+                Logger.logInfo("close " + formName + ".");<Br>
+                else<Br>
+                Logger.logWarn("not close " + formName + ".");<Br>
+                return WaitingUtils.invisibilityOfElementLocated(uniqElement.getLocator());<Br>
+                }<Br>
+                }<Br>
+            </code>
+        </div>
+
+        <div class="language card bg-blue" id="language">
+            <h2>My skills</h2>
+            <ol class="list">
+                <li>English: Intermediate (B1), Russian: Advanced (C2)</li>
+                <li>Responsibility, Purposefulness, Resourcefulness, Desire to develop, Communicative</li>
+                <li>Java, QA, HTML, CSS, Javascript, DB</li>
+            </ol>
+        </div>
+
+        <div class="courses card bg-red" id="course">
+            <h2>Courses</h2>
+            <ul class="link-list">
+                <li>
+                    <a href="https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw">Vladilen Minin channel</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw">JS course</a>
+                </li>
+                <li>
+                    <a href="https://coursera.org">QA course</a>
+                </li>
+                <li>
+                    <a href="https://a1qa.com">QA Automation course</a>
+                </li>
+            </ul>
+
+            <div class="contact">
+                <h2>Contact me</h2>
+                <form action="">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="name">Your name:</label>
+                            <input type="text" id="name" placeholder="Enter your name...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your email:</label>
+                            <input type="email" id="email" placeholder="Enter email...">
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Your email:</label>
-                        <input type="email" id="email" placeholder="Enter email...">
+                        <label for="text">Your message:</label>
+                        <textarea id="text" rows="2" cols="15"></textarea>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="text">Your message:</label>
-                    <textarea id="text" rows="2" cols="15"></textarea>
-                </div>
-
-                <input class="btn" type="submit" value="Contact!">
-            </form>
-        </div>
-        <div class="position">
-            <div class="box"></div>
-
+                    <input class="btn" type="submit" value="Contact!">
+                </form>
+            </div>
+            <div class="position">
+                <div class="box"></div>
+            </div>
         </div>
     </div>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-logo">
+                    <a href="https://rs.school/js/" target="_blank">
+                        <div class="footer-media">
+                            <img src="recources/rs_school_js.svg" class="footer-image">
+                        </div>
+                    </a>
+                </div>
+                <div class="footer-foundation">
+                    2021
+                </div>
+                <nav class="footer-github">
+                    <a href="https://github.com/GlebKisliak" target="_blank" class="footer-link link">
+                        GitHUB
+                    </a>
+                </nav>
+            </div>
+        </div>
 
+    </footer>
 </div>
 </body>
 </html>
